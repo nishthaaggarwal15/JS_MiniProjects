@@ -1,48 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Validation</title>
-  <style>
-    .error {
-      color: red;
-    }
-  </style>
-</head>
-<body>
-
-<form id="myForm" onsubmit="return validateForm()">
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" required>
-  <span id="nameError" class="error"></span>
-  <br>
-
-  <label for="phone">Phone:</label>
-  <input type="text" id="phone" name="phone" required>
-  <span id="phoneError" class="error"></span>
-  <br>
-
-  <label for="address">Address:</label>
-  <textarea id="address" name="address" required></textarea>
-  <span id="addressError" class="error"></span>
-  <br>
-
-  <label for="aadhar">Aadhar Card:</label>
-  <input type="text" id="aadhar" name="aadhar" required>
-  <span id="aadharError" class="error"></span>
-  <br>
-
-  <label for="email">Email:</label>
-  <input type="text" id="email" name="email" required>
-  <span id="emailError" class="error"></span>
-  <br>
-
-  <input type="submit" value="Submit">
-</form>
-
-<script>
-  function validateForm() {
+function validateForm() {
     clearErrors();
 
     const name = document.getElementById('name').value;
@@ -85,7 +41,3 @@
       element.textContent = ' ';
     });
   }
-</script>
-
-</body>
-</html>

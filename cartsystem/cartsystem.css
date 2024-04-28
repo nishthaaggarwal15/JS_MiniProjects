@@ -1,0 +1,36 @@
+#cont {
+    height: 20px;
+    width: 500px;
+    border: 1px solid teal;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: bisque;
+}
+
+
+
+#cont1 {
+    height: 200px;
+    width: 500px;
+    border: 1px solid teal;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+
+#cont1>div {
+    height: 80%;
+    width: 25%;
+    border: 1px solid teal;
+}
+
+#cont1>div>div {
+    height: 70%;
+    width: 100%;
+}
+
+#img {
+    height: 100%;
+    width: 100%;
+}

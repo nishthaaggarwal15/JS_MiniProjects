@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="foodcart.css">
 </head>
 <body>
 
@@ -35,59 +36,4 @@
     
 </body>
 </html>
-
-
-<script>
-
-function addtocart(){
-
-  var x =  document.getElementById("head")
-  var y = document.getElementById("img2")
-
-  var tr = document.createElement("tr")
-
-  var td1 = document.createElement("td")
-  td1.innerText = x.innerText
-
-  var td2 = document.createElement("img")
-  td2.src = y.src
-
-  tr.append(td1 , td2)
-
-  document.querySelector("body").append(tr)
-
-
-
-}
-function addtocart1(){
-
-var x =  document.getElementById("head1")
-var y = document.getElementById("img3")
-
-var tr = document.createElement("tr")
-
-var td1 = document.createElement("td")
-td1.innerText = x.innerText
-
-var td2 = document.createElement("img")
-td2.src = y.src
-
-tr.append(td1 , td2)
-
-document.querySelector("body").append(tr)
-
-
-
-}
-
-</script>
-
-
-<style>
-
-.img1 {
-    height: 20px;
-    width: 20px;
-}
-
-</style>
+<script src="foodcart.js"></script>

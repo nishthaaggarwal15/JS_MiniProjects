@@ -1,15 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Triangle Area Calculator</title>
-</head>
-<body>
-
-<h1>Triangle Area Calculator</h1>
-
-<script>
     // Function to calculate the area of a triangle
     function calculateArea() {
         // Prompt the user for the base and height values
@@ -31,7 +19,3 @@
 
     // Call the calculateArea function when the page loads
     calculateArea();
-</script>
-
-</body>
-</html>
