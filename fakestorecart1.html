@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>products</h1>
+
+    <div id = "container"></div>
+
+    <button> <a href="./fakestorecart2.html">show product</a>  
+     </button>
+    
+    
+</body>
+</html>
+
+<script>
+
+    var url = `https://fakestoreapi.com/products`;
+
+    var container= document.getElementById("container")
+
+    async function getData() {
+   var res = await fetch(url)
+        res =await res.json()
+        appenddata(res)
+        console.log(res)
+
+    }
+
+    getData()
+function appenddata(res1){
+ 
+        res1.forEach(function(el){
+
+            var image = document.createElement("img")
+            image.src  = el.image
+            image.setAttribute("class" , "cont")
+
+            var add_to_cart = document.createElement("button")
+            add_to_cart.innerText = " cart "
+            add_to_cart.onclick = () => {
+                addtocart(el)
+            }
+
+            container.append(image , add_to_cart)
+         })
+}
+
+    
+
+function addtocart(data1){
+var data = JSON.parse(localStorage.getItem("product")) || []
+
+data.push(data1)
+
+localStorage.setItem("product" , JSON.stringify(data))
+}
+
+
+
+    
+</script>
+
+
+<style>
+    .cont {
+        height: 100px;
+        width: 100px;
+    }
+</style>

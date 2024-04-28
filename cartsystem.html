@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id = "cont">
+        <div>Home</div>
+        <div>About</div>
+        <div>login</div>
+        <div>Singup</div>
+        <div id = "cart">cart</div>
+    </div>
+   
+    <div id = "cont1">
+        <div>
+            <div>
+                <img id = "img" src="https://th.bing.com/th?id=OIP.zNsLu3Hwfbi3vsU4SaWBpQHaHa&w=250&h=250&c=8&rs=1&qlt=30&o=6&dpr=1.3&pid=3.1&rm=2" alt="">
+               <button onclick="addtocart()">Add to cart</button>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img id = "img" src="https://th.bing.com/th?id=OIP.zNsLu3Hwfbi3vsU4SaWBpQHaHa&w=250&h=250&c=8&rs=1&qlt=30&o=6&dpr=1.3&pid=3.1&rm=2" alt="">
+               <button onclick="addtocart1()">Add to cart</button>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img id = "img" src="https://th.bing.com/th?id=OIP.zNsLu3Hwfbi3vsU4SaWBpQHaHa&w=250&h=250&c=8&rs=1&qlt=30&o=6&dpr=1.3&pid=3.1&rm=2" alt="">
+               <button onclick="addtocart2()">Add to cart</button>
+            </div>
+        </div>
+    </div>
+
+    <h1 id = "amt">Amount</h1>
+
+
+
+</body>
+</html>
+<style>#cont {
+    height: 20px;
+    width: 500px;
+    border: 1px solid teal;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: bisque;
+}
+
+
+
+#cont1 {
+    height: 200px;
+    width: 500px;
+    border: 1px solid teal;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+
+#cont1>div {
+    height: 80%;
+    width: 25%;
+    border: 1px solid teal;
+}
+
+#cont1>div>div {
+    height: 70%;
+    width: 100%;
+}
+
+#img {
+    height: 100%;
+    width: 100%;
+}</style>
+
+
+<script >
+    
+var count = 0;
+var amount1 =0;
+
+function addtocart() {
+
+ count = count + 1;
+ amount1= amount1 + 20;
+
+
+   var cart = document.getElementById("cart")
+   cart.innerText  = count
+
+   var amount = document.getElementById("amt")
+   amount.innerText = amount1
+}
+
+
+
+var count = 0;
+var amount1 =0;
+
+function addtocart1() {
+
+ count = count + 1;
+ amount1= amount1 + 40;
+
+
+   var cart = document.getElementById("cart")
+   cart.innerText  = count
+
+   var amount = document.getElementById("amt")
+   amount.innerText = amount1
+}
+
+
+var count = 0;
+var amount1 =0;
+
+function addtocart2() {
+
+ count = count + 1;
+ amount1= amount1 + 60;
+
+
+   var cart = document.getElementById("cart")
+   cart.innerText  = count
+
+   var amount = document.getElementById("amt")
+   amount.innerText = amount1
+}
+</script>

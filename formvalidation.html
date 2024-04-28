@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<form id="myForm" onsubmit="return validateForm()">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
+  <span id="nameError" class="error"></span>
+  <br>
+
+  <label for="phone">Phone:</label>
+  <input type="text" id="phone" name="phone" required>
+  <span id="phoneError" class="error"></span>
+  <br>
+
+  <label for="address">Address:</label>
+  <textarea id="address" name="address" required></textarea>
+  <span id="addressError" class="error"></span>
+  <br>
+
+  <label for="aadhar">Aadhar Card:</label>
+  <input type="text" id="aadhar" name="aadhar" required>
+  <span id="aadharError" class="error"></span>
+  <br>
+
+  <label for="email">Email:</label>
+  <input type="text" id="email" name="email" required>
+  <span id="emailError" class="error"></span>
+  <br>
+
+  <input type="submit" value="Submit">
+</form>
+
+<script>
+  function validateForm() {
+    clearErrors();
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
+    const aadhar = document.getElementById('aadhar').value;
+    const email = document.getElementById('email').value;
+
+    if (!/^[a-zA-Z\s]+$/.test(name)) {
+      document.getElementById('nameError').textContent = 'Invalid name';
+      return false;
+    }
+
+    if (!/^\d{10}$/.test(phone)) {
+      document.getElementById('phoneError').textContent = 'Invalid phone number';
+      return false;
+    }
+
+    if (!address.trim()) {
+      document.getElementById('addressError').textContent = 'Address cannot be empty';
+      return false;
+    }
+
+    if (!/^\d{12}$/.test(aadhar)) {
+      document.getElementById('aadharError').textContent = 'Invalid Aadhar card number';
+      return false;
+    }
+
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      document.getElementById('emailError').textContent = 'Invalid email address';
+      return false;
+    }
+ 
+    return true;
+  }
+
+  function clearErrors() {
+    const errorElements = document.querySelectorAll('.error');
+    errorElements.forEach(element => {
+      element.textContent = ' ';
+    });
+  }
+</script>
+
+</body>
+</html>

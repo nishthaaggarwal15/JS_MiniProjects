@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Form</h1>
+    
+    <form action="">
+        <label for="">Enter name</label>  <br>
+        <input type="text" placeholder="Name" id = "name"> <br>
+
+        <label for="">Enter age</label> <br>
+        <input type="text" placeholder="age" id = "age"> <br>
+
+        <label for="">Enter education</label> <br>
+        <input type="text" placeholder="Education" id = "education"> <br>
+    
+       <input type="submit">
+    
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>age</th>
+                <th>Education</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+    </table>
+
+</body>
+</html>
+
+<script>
+
+document.querySelector("form").addEventListener("submit" , myfunction)
+
+function myfunction(e){
+    e.preventDefault()
+    var name = document.querySelector("#name").value
+    console.log(name)
+
+    var age = document.querySelector("#age").value
+    console.log(age)
+
+    var education = document.querySelector("#education").value
+    console.log(education)
+
+
+    var tr = document.createElement("tr")
+
+    var td1 = document.createElement("td")
+    td1.innerText = name
+
+    var td2 = document.createElement("td")
+    td2.innerText = age
+
+    var td3 = document.createElement("td")
+    td3.innerText = education
+
+    tr.append(td1 , td2 , td3)
+
+    document.querySelector("tbody").append(tr)
+
+
+}
+
+</script>

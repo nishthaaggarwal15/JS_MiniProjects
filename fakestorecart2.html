@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "container1"></div>
+
+    <button> <a href="./fakestorecart1.html">add more product</a> </button>
+</body>
+</html>
+
+<script>
+    var container1 = document.getElementById("container1")
+
+
+    var data = JSON.parse(localStorage.getItem("product")) || []
+    
+    function showproduct(data){
+        container1.innerHTML = null
+
+        data.forEach(function(el){
+
+         var image = document.createElement("img")
+         image.src  = el.image
+         image.setAttribute("class" , "cont")
+
+        container1.append(image)
+
+
+
+})
+    }
+    showproduct(data)
+
+
+
+
+
+
+</script>
+
+
+
+<style>
+    .cont {
+        height: 100px;
+        width: 100px;
+    }
+</style>
